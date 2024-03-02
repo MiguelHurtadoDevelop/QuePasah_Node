@@ -5,7 +5,7 @@ const socket = io();
     let destinatarioPrivado;
     let mensajesPrivados = {};
 
-    let url = "http://127.0.0.1:3000/";
+    let url = "https://quepasah.onrender.com/";
     
 
     //Socket para mostrar cuando alguien se conecta a chat

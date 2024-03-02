@@ -1,1 +1,2 @@
-{"ext":"html,css,js,cjs,mjs,json"}
+{"ext":"html,css,js,cjs,mjs,json",
+"watch" : "./bin/www"}

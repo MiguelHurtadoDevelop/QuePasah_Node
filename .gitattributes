@@ -1,4 +1,1 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-package.json linguist-generated=true
-package-lock.json linguist-generated=true
+node_modules

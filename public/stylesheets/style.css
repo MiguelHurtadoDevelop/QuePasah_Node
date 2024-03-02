@@ -1,0 +1,358 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+
+}
+
+
+#chat{
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+#chatContainer{
+  display: flex;
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+
+}
+#chatGeneral{
+  width: 80%;
+  height: 100vh;
+}
+#chatPrivado{
+  width: 80%;
+  display: none;
+}
+#chatOptions{
+  width: 20%;
+  height: 98vh;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2vh;
+
+}
+
+#perfilImg{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border : 2px solid #000000;
+}
+
+#chatSelect{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: #128C7E;
+  color: #fff;
+  cursor: pointer;
+
+}
+#stickers{
+  display: none;
+} 
+
+
+
+/* Estilo para ocultar el input de tipo file */
+.file-input-container input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+/* Estilo del contenedor que simula un botón */
+.file-input-label {
+  display: inline-block;
+  padding: 10px 15px; /* Ajusta el relleno según tus preferencias */
+  background-color: #128C7E; /* Cambia el color de fondo según tus preferencias */
+  color: #fff; /* Cambia el color del texto según tus preferencias */
+  border: none;
+  border-radius: 5px; /* Ajusta el radio de borde según tus preferencias */
+  cursor: pointer;
+}
+
+/* Estilo hover para resaltar cuando el mouse pasa sobre el contenedor */
+.file-input-label:hover {
+  background-color: #128C7E; /* Cambia el color de fondo hover según tus preferencias */
+}
+form {
+  width: 80%;
+  height: 10%;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  background-color: gray;
+}
+
+#mensaje{
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+#mensajePrivado{
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 16px;
+}
+.chatBox{
+
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; 
+  padding-top: 100px;
+  
+}
+
+.chatBox h1{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+  width: inherit;
+  text-align: center;
+  position: relative;
+  top: 0;
+  background-color: gray;
+}
+
+#enviarBtn  {
+  width: 10%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: #128C7E;
+  color: #fff;
+  cursor: pointer;
+}
+
+#stickersActivate{
+  width: 50px;
+  height: 50px;
+}
+
+.propio{
+  background-color: #128C7E;
+  color: #fff;
+  align-self: flex-end;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 50%;
+  word-wrap: break-word;
+}
+
+.propio img{
+  max-width: 70px;
+  height: auto;
+}
+li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+
+}
+
+.recibido{
+  background-color: grey;
+  color: white;
+  align-self: flex-start;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 50%;
+  word-wrap: break-word;
+}
+
+.unido{
+  background-color: rgb(173, 170, 170);
+  color: #000;
+  align-self: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 50%;
+  word-wrap: break-word;
+}
+#stickersActivate{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  
+}
+#stickers{
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+}
+.emoji{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#chatPrivado{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+
+}
+#chatPrivado button{
+  width: min-content;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: #128C7E;
+  color: #fff;
+  cursor: pointer;
+}
+
+#mensajesPrivados{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+#chatPrivado h1{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 0;
+  background-color: gray;
+}
+ul{
+  
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
+#userList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#userList li{
+  font-size: 15px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+#userList li img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  
+}
+
+#registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#registro div {
+  background-color: gray;
+  color: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+#registro h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#registro input {
+  display: block;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#registro button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #128C7E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #128C7E;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 80%;
+  z-index: 100;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+  <div id="registro">
+    <div>
+      <h1>Registro</h1>
+      <input type="text" id="usuario" placeholder="Nombre de usuario" required/>
+      
+      <label for="perfilImagen">Foto de perfil : </label>
+      <input type="file" id="perfilImagen" accept="image/*" />
+      <button onclick="login()">Entrar</button>
+    </div>
+    
+    
+  </div>
+
+  <div id="chat" >
+    <div id="chatContainer">
+      <div id="chatOptions">
+        <div id="perfil">
+          <img id="perfilImg" src="http://127.0.0.1:3000/archivosCompartidos/default_profile.jpg" alt="Foto de perfil"/>
+            
+        </div>
+        <div>
+          <select id="chatSelect">
+            <option value="general">General</option>
+            <option value="noticias">Noticias</option>
+            <option value="reuniones">Reuniones</option>
+          </select>
+        </div>
+        <ul id="userList"></ul>
+      </div>
+      
+      <div id="chatGeneral">
+        
+        
+    
+        <ul id="general" class="chatBox">
+          <div class="header">
+            <h1>Chat General</h1>
+            <div id="escribiendogeneral"></div>
+          </div>
+        </ul>
+        <ul id="noticias" style="display: none;" class="chatBox">
+          <div class="header">
+            <h1>Chat de Noticias</h1>
+            <div id="escribiendonoticias"></div>
+          </div>
+          
+        </ul>
+        <ul id="reuniones" style="display: none;" class="chatBox">
+          <div class="header">
+            <h1>Chat de Reuniones</h1>
+            <div id="escribiendoreuniones"></div>
+          </div>
+        </ul>
+
+        <form>
+          <div class="file-input-container">
+            <label for="fileInput" class="file-input-label">+</label>
+            <input type="file" id="fileInput" name="fileInput">
+          </div>
+
+          
+          
+          <div class="stickersContainer">
+            <div id="stickers">
+              <img class="emoji"  src="http://127.0.0.1:3000/images/emoji1.png" onclick="enviarSticker('emoji1.png')">
+              <img class="emoji"  src="http://127.0.0.1:3000/images/emoji2.png" onclick="enviarSticker('emoji2.png')">
+              <img class="emoji"  src="http://127.0.0.1:3000/images/emoji3.png" onclick="enviarSticker('emoji3.png')">
+              <img class="emoji"  src="http://127.0.0.1:3000/images/emoji4.png" onclick="enviarSticker('emoji4.png')">
+              <img class="emoji"  src="http://127.0.0.1:3000/images/emoji5.png" onclick="enviarSticker('emoji5.png')">
+              <img class="emoji"  src="http://127.0.0.1:3000/images/emoji6.png" onclick="enviarSticker('emoji6.png')">
+              <img class="emoji"  src="http://127.0.0.1:3000/images/emoji7.png" onclick="enviarSticker('emoji7.png')">
+            </div>
+            <img src="http://127.0.0.1:3000/images/sticker-icon.png" onclick="mostrarStickers()" id="stickersActivate">
+          </div>
+          
+
+          <input type="text" id="mensaje" />
+          <button type="button" onclick="enviarMensaje()" id="enviarBtn">Enviar</button>
+        </form>
+    
+      </div>
+
+      <div id="chatPrivado" style="display: none;">
+        <button onclick="volverAlChat()">&lt;</button>
+        
+        <h1 id="chatPrivadoTitle"></h1>
+        <ul id="mensajesPrivados" >
+          
+        </ul>
+        <form>
+          
+          <input type="text" id="mensajePrivado" />
+          <button type="button" onclick="enviarMensajePrivado()" id="enviarPrivadoBtn">Enviar</button>
+        </form>
+        
+      </div>
+    </div>
+    
+    
+  </div>
+
+  
+
+  <script src="javascripts/aplicacion.js"></script>
+</body>
+
+</html>
